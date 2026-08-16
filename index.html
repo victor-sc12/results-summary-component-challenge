@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style/style.css">
+  <title>Frontend Mentor | Results summary component</title>
+</head>
+
+<body>
+
+  <main>
+    <section class="score">
+      <div class="score__wrapper">
+        <p class="score__heading">Your Result</p>
+        <p class="score__number-result"><span>76</span><span>of 100</span></p>
+        <p class="score__quality-result">Great</p>
+        <p class="score__description">You scored higher than 65% of the people who have taken these tests.</p>
+      </div>
+    </section>
+    
+    <section class="summary">
+      <div class="summary__wrapper">
+        <p class="summary__heading">Summary</p>
+        <div class="summary__param summary__param--reaction">
+          <span class="icon-wrapper icon-wrapper--reaction"><img class="param-icon" src="./assets/images/icon-reaction.svg" alt="Reaction Icon">Reaction</span>
+          <span class="summary__grade">80 <span>/ 100</span></span>
+        </div>
+        <div class="summary__param summary__param--memory">
+          <span class="icon-wrapper icon-wrapper--memory"><img class="param-icon" src="./assets/images/icon-memory.svg" alt="Memory Icon">Memory</span>
+          <span class="summary__grade">92 <span>/ 100</span></span>
+        </div>
+        <div class="summary__param summary__param--verbal">
+          <span class="icon-wrapper icon-wrapper--verbal"><img class="param-icon" src="./assets/images/icon-verbal.svg" alt="Verbal Icon">Verbal</span>
+          <span class="summary__grade">61 <span>/ 100</span></span>
+        </div>
+        <div class="summary__param summary__param--visual">
+          <span class="icon-wrapper icon-wrapper--visual"><img class="param-icon" src="./assets/images/icon-visual.svg" alt="Visual Icon">Visual</span>
+          <span class="summary__grade">72 <span>/ 100</span></span>
+        </div>
+      </div>
+    </section>
+    <button class="btn">Continue</button>
+  </main>
+  
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </footer>
+</body>
+</html>

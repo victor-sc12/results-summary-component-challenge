@@ -1,0 +1,178 @@
+:root {
+    box-sizing: border-box;
+
+    /* Color Custom Properties */
+    --light-slate-blue: hsl(252, 100%, 67%);
+    --light-royal-blue: hsl(241, 81%, 54%);
+    --white: hsl(0, 0%, 100%);
+    --pale-blue: hsl(221, 100%, 96%);
+    --light-lavender: hsl(241, 100%, 89%);
+    --dark-gray-blue: hsl(224 30% 27%);
+    --violet-blue: hsla(256, 72%, 46%, 1);
+    --persian-blue: hsla(241, 72%, 46%, 0);
+    --light-red: hsl(0 100% 67%);
+    --orangey-yellow: hsl(39 100% 56%);
+    --green-teal: hsl(166 100% 37%);
+    --cobalt-blue: hsl(234 85% 45%);
+    --red-50: hsl(0 100% 98%);
+    --yellow-50: hsl(38 100% 98%);
+    --green-50: hsl(162 62% 97%);
+    --blue-50: hsl(234 71% 97%);
+
+    /* Font Custom Properties */
+    --font-16-18-size: clamp(1rem, .5rem + 1.5vw, 1.125rem);
+    --font-18-24-size: clamp(1.125rem, .5rem + 2vw, 1.5rem);
+    --font-24-32-size: clamp(1.5rem, 1rem + 2vw, 2rem);
+    --font-56-72-size: clamp(3.5rem, 2.5rem + 2vw, 4.5em);
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+
+    /* Font settup */
+    font-family: "Hanken Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 500;
+
+}
+
+main {
+    width: min(100%, 46em);
+    margin-inline: auto;
+}
+
+.score {
+    text-align: center;
+    background: linear-gradient(var(--light-slate-blue), var(--light-royal-blue));
+    border-bottom-left-radius: 2em;
+    border-bottom-right-radius: 2em;
+}
+
+.score__wrapper {
+    width: 70%;
+    margin-inline: auto;
+    padding-block: clamp(2em, 3vw, 2.8125em);
+}
+
+.score__heading {
+    color: var(--light-lavender);
+    font-size: var(--font-18-24-size);
+    margin-block: 0%;
+}
+
+.score__number-result {
+    display: inline-block;
+    /* outline: .1em red solid; */
+    margin-block: clamp(1.5em, 3vw, 2em);
+    padding-inline: clamp(2.40625em, 3vw, 3.71875em);
+    padding-block: clamp(1.96875em, 2.5vw, 3.28125em);
+    border-radius: 50%;
+    background: linear-gradient(var(--violet-blue), var(--persian-blue));
+
+    & span:first-child {
+        /* outline: .1em limegreen solid; */
+        display: block;
+        color: var(--white);
+        font-size: var(--font-56-72-size);
+        font-weight: 800;
+    }
+
+    & span:last-child {
+        /* outline: .1em limegreen solid; */
+        display: block;
+        color: var(--light-lavender);
+        font-size: var(--font-16-18-size);
+    }
+}
+
+.score__quality-result {
+    color: var(--white);
+    font-size: var(--font-24-32-size);
+    font-weight: 700;
+    margin-block: 0;
+}
+
+.score__description {
+    color: var(--light-lavender);
+    font-size: var(--font-16-18-size);
+    margin-block: clamp(.47em, 2.5vw, 0.94em) 0;
+}
+
+.summary__wrapper {
+    width: 81.13%;
+    margin-inline: auto;
+}
+
+.summary__heading {
+    font-size: var(--font-18-24-size);
+    color: var(--dark-gray-blue);
+    font-weight: 700;
+    margin-block-end: 1.33333em;
+}
+
+.summary__param {
+    /* outline: 1px red solid; */
+    font-size: var(--font-16-18-size);
+    display: flex;
+    justify-content: space-between;
+    padding-block: .9166em;
+    border-radius: .75em;
+    padding-inline: 1em;
+}
+
+.summary__param--reaction {background-color: var(--red-50);}
+.summary__param--memory {
+    background-color: var(--yellow-50);
+    margin-block: 1em;
+}
+.summary__param--verbal {
+    background-color: var(--green-50);
+    margin-block: 1em;
+}
+.summary__param--visual {background-color: var(--blue-50);}
+
+.icon-wrapper {
+    display: inherit;
+    align-items: center;
+    gap: 1em;
+}
+
+.icon-wrapper--reaction {color: var(--light-red);}
+.icon-wrapper--memory {color: var(--orangey-yellow);}
+.icon-wrapper--verbal {color: var(--green-teal);}
+.icon-wrapper--visual {color: var(--cobalt-blue);}
+
+.summary__grade {
+    color: var(--dark-gray-blue);
+
+    & span {
+        /* outline: cadetblue solid .1em; */
+        color: hsl(224 30% 27% / 50%);
+        font-weight: 700;
+    }
+}
+
+.btn {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--white);
+    background-color: var(--dark-gray-blue);
+    border-radius: 7.11111em;
+    width: 81.13%;
+    display: block;
+    margin-inline: auto;
+    margin-block-start: clamp(1.33333em, 2.5vw, 1.77777em);
+    padding-block: 0.9166em;
+}
+
+.attribution { 
+    font-size: 0.6875rem; 
+    text-align: center; 
+    margin: 1.4545em;
+}
+.attribution a { color: hsl(228, 45%, 44%); }
